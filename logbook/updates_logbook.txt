@@ -1,0 +1,22 @@
+
+-----Version 1.0.1 CRUD ADMIN PRODUCTS
+21/03/2023 
+03:19pm
+Se creo el controlador de cada una de las tablas(crear, editar, borrar)
+para carpeta Productos desde Admin
+
+*Pendiente la creación de CRUD para user, categorias y tiendas.
+
+------Version 1.0.2 CRUD ADMIN STORES
+23/03/23
+1:33am
+Se creo el controlador de cada una de las tablas(crear, editar, borrar)
+para carpeta Stores desde Admin
+
+*Pendiente la creación de CRUD para user y categorias.
+
+-----Version 1.0.3 CRUD ADMIN ORDERS/SIZE/CATEGORIES/USER
+13/04/23
+12:45
+Se creo el controlador de las tablas(crear, editar, borrar)
+para carpeta Size, Order, Category y user  desde Admin

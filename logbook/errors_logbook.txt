@@ -1,0 +1,16 @@
+---Error en la creacion del CRUD de Store
+No se encontraba Controller class
+SOLUCION: faltaba la especificicacion completa del class en el path
+
+Documentos modificados:
+web.php 
+StoreController.php
+
+---Pendiente Modificacion de Status
+Aceptar edicion de status diferente de ACTIVO a cada uno de los elementos 
+de las tablas correspondientes aL CRUD ADMIN.
+
+---Pendiente Contabilizador Automatico en Total desde Ordenes
+
+---Error registro de usuarios desde el CRUD Admin
+rectificar valores del Controller para la transerencia de datos.
