@@ -17,6 +17,13 @@ para carpeta Stores desde Admin
 
 -----Version 1.0.3 CRUD ADMIN ORDERS/SIZE/CATEGORIES/USER
 13/04/23
-12:45
+12:45pm
 Se creo el controlador de las tablas(crear, editar, borrar)
 para carpeta Size, Order, Category y user  desde Admin
+
+------Version 1.1.0 Fabricas y Semilleros 
+14/04/23
+12:15am
+Para la tabla Categorie se probo un registro unitario
+Para la tabla Store se probo una fabrica con la creacion de 5 registros
+Ambos Exitosos...
