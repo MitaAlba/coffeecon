@@ -1,6 +1,8 @@
 <h1>Admin Products CREATE</h1>
 
-<form class="row g-3 needs-validation" novalidate method="POST" action="/admin/productos">
+<form class="row g-3 needs-validation" novalidate method="POST" action="/admin/productos" 
+enctype="multipart/form-data">
+    
     {{-- investigar el significado de csrf--}}
     @csrf
     <div class="col-md-6">
@@ -46,7 +48,8 @@
   </div> --}}
     <div class="col-md-6">
         <label for="validationCustom05" class="form-label">Image_1</label>
-        <input type="text" class="form-control" id="validationCustom05" name="image_1" required>
+        <input type="file" class="form-control" id="validationCustom05" name="image_1" 
+        accept="image/jpg, image/png" required>
         <div class="invalid-feedback">
             Please provide a valid zip.
         </div>
@@ -54,7 +57,8 @@
 
     <div class="col-md-6">
         <label for="validationCustom05" class="form-label">Image_2</label>
-        <input type="text" class="form-control" id="validationCustom05" name="image_2" required>
+        <input type="file" class="form-control" id="validationCustom05" name="image_2" 
+        accept="image/jpg, image/png" required>
         <div class="invalid-feedback">
             Please provide a valid zip.
         </div>
@@ -62,7 +66,8 @@
 
     <div class="col-md-6">
         <label for="validationCustom05" class="form-label">Image_3</label>
-        <input type="text" class="form-control" id="validationCustom05" name="image_3" required>
+        <input type="file" class="form-control" id="validationCustom05" name="image_3"
+        accept="image/jpg, image/png" required>
         <div class="invalid-feedback">
             Please provide a valid zip.
         </div>

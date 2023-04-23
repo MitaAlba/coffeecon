@@ -27,3 +27,9 @@ para carpeta Size, Order, Category y user  desde Admin
 Para la tabla Categorie se probo un registro unitario
 Para la tabla Store se probo una fabrica con la creacion de 5 registros
 Ambos Exitosos...
+
+-----Version 1.2.1 CRUD con imagenes Parte 1
+19/04/23
+1:00pm
+CRUD para la parte de productos con manejo de imagenes como un file.
+

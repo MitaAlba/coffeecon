@@ -31,18 +31,51 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+
         $product = new Product();
+        $img_1="default_1.jpg";
+        $img_2="default_2.jpg";
+        $img_3="default_3.jpg";
+
+
         $product->category_id=$request->category_id;
         $product->name=$request->name;
         $product->description=$request->description;
-        $product->image_1=$request->image_1;
-        $product->image_2=$request->image_2;
-        $product->image_3=$request->image_3;
+        $product->image_1=$img_1;
+        $product->image_2=$img_2;
+        $product->image_3=$img_3;
         $product->price=$request->price;
         $product->size_id=$request->size_id;
         $product->status="ACTIVO";
 
         $product->save();
+
+
+        if($request->hasFile('image_1') && $request->file('image_1')->isValid()){
+            $img_1=$product->id."_1_".$request->name.".".$request->image_1->extension();
+            $request->image_1->storeAs('products/', $img_1);
+        }
+        
+
+
+        if($request->hasFile('image_2') && $request->file('image_2')->isValid()){
+            $img_2=$product->id."_2_".$request->name.".".$request->image_2->extension();
+            $request->image_2->storeAs('products/', $img_2);
+        }
+        
+
+        if($request->hasFile('image_3') && $request->file('image_3')->isValid()){
+            $img_3=$product->id."_3_".$request->name.".".$request->image_3->extension();
+            $request->image_3->storeAs('products/', $img_3);
+        }
+
+        $product->image_1=$img_1;
+        $product->image_2=$img_2;
+        $product->image_3=$img_3;
+        $product->save();
+        //dd($product);
+
+
         return view('/admin.product.index')->with('products',Product::all());
     }
 
@@ -70,15 +103,38 @@ class ProductController extends Controller
     public function update(Request $request, string $id)
     {
         $product =Product::find($id);
+        $img_1=$product->image_1;
+        $img_2=$product->image_2;
+        $img_3=$product->image_3;
         $product->category_id=$request->category_id;
         $product->name=$request->name;
         $product->description=$request->description;
-        $product->image_1=$request->image_1;
-        $product->image_2=$request->image_2;
-        $product->image_3=$request->image_3;
+        
         $product->price=$request->price;
         $product->size_id=$request->size_id;
+        //Para editar un status como INACTIVO tambien
+        //Si queda tiempo agregar un SELECT
+        // $product->status=$request->status;
+
         //$product->status="ACTIVO";
+        if($request->hasFile('image_1') && $request->file('image_1')->isValid()){
+            $img_1=$product->id."_1_".$request->name.".".$request->image_1->extension();
+            $request->image_1->storeAs('products/', $img_1);
+        }
+
+        if($request->hasFile('image_2') && $request->file('image_2')->isValid()){
+            $img_2=$product->id."_2_".$request->name.".".$request->image_2->extension();
+            $request->image_2->storeAs('products/', $img_2);
+        }
+        
+        if($request->hasFile('image_3') && $request->file('image_3')->isValid()){
+            $img_3=$product->id."_3_".$request->name.".".$request->image_3->extension();
+            $request->image_3->storeAs('products/', $img_3);
+        }
+
+        $product->image_1=$img_1;
+        $product->image_2=$img_2;
+        $product->image_3=$img_3;
 
         $product->save();
         return view('/admin.product.index')->with('products',Product::all())
@@ -100,6 +156,10 @@ class ProductController extends Controller
         //borrado fisico
         $product =Product::find($id);
        
+        Storage::delete('products/'.$product->image_1);
+        Storage::delete('products/'.$product->image_2);
+        Storage::delete('products/'.$product->image_3);
+
 
         $product->delete();
         

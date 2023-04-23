@@ -29,9 +29,9 @@
       <td>{{$product->category_id}}</td>
       <td>{{$product->name}}</td>
       <td>{{$product->description}}</td>
-      <td>{{$product->image_1}}</td>
-      <td>{{$product->image_2}}</td>
-      <td>{{$product->image_3}}</td>
+      <td><img src="{{asset('storage/products/'.$product->image_1)}}" alt="{{$product->image_1}}" width="75"> </td>
+      <td><img src="{{asset('storage/products/'.$product->image_2)}}" alt="{{$product->image_2}}" width="75"> </td>
+      <td><img src="{{asset('storage/products/'.$product->image_3)}}" alt="{{$product->image_3}}" width="75"> </td>
       <td>{{$product->price}}</td>
       <td>{{$product->size_id}}</td>
       <td>{{$product->status}}</td>

@@ -5,7 +5,8 @@
 @section('contenido')
 
 <h1>Admin Products EDIT</h1>
-<form class="row g-3 needs-validation" novalidate method="POST" action="/admin/productos/{{$products->id}}">
+<form class="row g-3 needs-validation" novalidate method="POST" action="/admin/productos/{{$products->id}}"
+    enctype="multipart/form-data">
     {{--SEARCH investigar el significado de csrf--}}
     @csrf
     {{-- PENDING:revisar si el metodo es get o put segun el route:list --}}
@@ -61,7 +62,7 @@
   </div> --}}
     <div class="col-md-6">
         <label for="validationCustom05" class="form-label">Image_1</label>
-        <input type="text" class="form-control" id="validationCustom05" name="image_1"  value="{{$products->image_1}}"required>
+        <input type="file" class="form-control" id="validationCustom05" name="image_1" accept="image/jpg, image/png">
         <div class="invalid-feedback">
             Please provide a valid zip.
         </div>
@@ -69,7 +70,7 @@
 
     <div class="col-md-6">
         <label for="validationCustom05" class="form-label">Image_2</label>
-        <input type="text" class="form-control" id="validationCustom05" name="image_2" value="{{$products->image_2}}" required>
+        <input type="file" class="form-control" id="validationCustom05" name="image_2" accept="image/jpg, image/png">
         <div class="invalid-feedback">
             Please provide a valid zip.
         </div>
@@ -77,7 +78,7 @@
 
     <div class="col-md-6">
         <label for="validationCustom05" class="form-label">Image_3</label>
-        <input type="text" class="form-control" id="validationCustom05" name="image_3" value="{{$products->image_3}}" required>
+        <input type="file" class="form-control" id="validationCustom05" name="image_3" accept="image/jpg, image/png">
         <div class="invalid-feedback">
             Please provide a valid zip.
         </div>
