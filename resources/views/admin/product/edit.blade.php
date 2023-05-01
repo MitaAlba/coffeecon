@@ -62,7 +62,8 @@
   </div> --}}
     <div class="col-md-6">
         <label for="validationCustom05" class="form-label">Image_1</label>
-        <input type="file" class="form-control" id="validationCustom05" name="image_1" accept="image/jpg, image/png">
+        <img src="{{asset('storage/products/'.$products->image_1)}}" alt="{{$products->image_1}}" width="75">
+        <input type="file" class="form-control" id="validationCustom05" name="image_1" accept="image/*">
         <div class="invalid-feedback">
             Please provide a valid zip.
         </div>
@@ -70,7 +71,8 @@
 
     <div class="col-md-6">
         <label for="validationCustom05" class="form-label">Image_2</label>
-        <input type="file" class="form-control" id="validationCustom05" name="image_2" accept="image/jpg, image/png">
+        <img src="{{asset('storage/products/'.$products->image_2)}}" alt="{{$products->image_2}}" width="75">
+        <input type="file" class="form-control" id="validationCustom05" name="image_2" accept="image/*">
         <div class="invalid-feedback">
             Please provide a valid zip.
         </div>
@@ -78,7 +80,8 @@
 
     <div class="col-md-6">
         <label for="validationCustom05" class="form-label">Image_3</label>
-        <input type="file" class="form-control" id="validationCustom05" name="image_3" accept="image/jpg, image/png">
+        <img src="{{asset('storage/products/'.$products->image_3)}}" alt="{{$products->image_3}}" width="75">
+        <input type="file" class="form-control" id="validationCustom05" name="image_3" accept="image/*">
         <div class="invalid-feedback">
             Please provide a valid zip.
         </div>

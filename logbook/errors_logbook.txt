@@ -14,3 +14,7 @@ de las tablas correspondientes aL CRUD ADMIN.
 
 ---Error registro de usuarios desde el CRUD Admin
 rectificar valores del Controller para la transerencia de datos.
+
+---No cargaba vista de Login ni Register 
+SOLUCIONADO
+Instalando node.js, reiniciando equipo y volviendo a emitir comandos. 

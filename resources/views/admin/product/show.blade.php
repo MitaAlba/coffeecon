@@ -61,7 +61,8 @@
   </div> --}}
     <div class="col-md-6">
         <label for="validationCustom05" class="form-label">Image_1</label>
-        <input type="text" class="form-control" id="validationCustom05" name="image_1"  value="{{$products->image_1}}"disabled>
+        <img src="{{asset('storage/products/'.$products->image_1)}}" alt="{{$products->image_1}}" width="75">
+        <input type="text" class="form-control" id="validationCustom05" name="image_1"  value="{{$products->image_1}}" disabled>
         <div class="invalid-feedback">
             Please provide a valid zip.
         </div>
@@ -69,6 +70,7 @@
 
     <div class="col-md-6">
         <label for="validationCustom05" class="form-label">Image_2</label>
+        <img src="{{asset('storage/products/'.$products->image_2)}}" alt="{{$products->image_2}}" width="75">
         <input type="text" class="form-control" id="validationCustom05" name="image_2" value="{{$products->image_2}}" disabled>
         <div class="invalid-feedback">
             Please provide a valid zip.
@@ -77,6 +79,7 @@
 
     <div class="col-md-6">
         <label for="validationCustom05" class="form-label">Image_3</label>
+        <img src="{{asset('storage/products/'.$products->image_3)}}" alt="{{$products->image_3}}" width="75">
         <input type="text" class="form-control" id="validationCustom05" name="image_3" value="{{$products->image_3}}" disabled>
         <div class="invalid-feedback">
             Please provide a valid zip.

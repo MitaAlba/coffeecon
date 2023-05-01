@@ -7,7 +7,14 @@ enctype="multipart/form-data">
     @csrf
     <div class="col-md-6">
         <label for="validationCustom01" class="form-label">Category_id</label>
-        <input type="text" class="form-control" id="validationCustom01" name="category_id"  required>
+        {{-- <input type="text" class="form-control" id="validationCustom01" name="category_id"  required> --}}
+        <select class="form-select" aria-label="Default select examples" name="category_id">
+            <option selected>Category</option>
+            @foreach($categories as $categorie)
+            <option value="{{$categorie->id}}">{{$categorie->name}}</option>
+            @endforeach
+
+        </select>
         <div class="valid-feedback">
             Looks good!
         </div>
@@ -49,7 +56,7 @@ enctype="multipart/form-data">
     <div class="col-md-6">
         <label for="validationCustom05" class="form-label">Image_1</label>
         <input type="file" class="form-control" id="validationCustom05" name="image_1" 
-        accept="image/jpg, image/png" required>
+        accept="image/*" required>
         <div class="invalid-feedback">
             Please provide a valid zip.
         </div>
@@ -58,7 +65,7 @@ enctype="multipart/form-data">
     <div class="col-md-6">
         <label for="validationCustom05" class="form-label">Image_2</label>
         <input type="file" class="form-control" id="validationCustom05" name="image_2" 
-        accept="image/jpg, image/png" required>
+        accept="image/*" required>
         <div class="invalid-feedback">
             Please provide a valid zip.
         </div>
@@ -67,12 +74,26 @@ enctype="multipart/form-data">
     <div class="col-md-6">
         <label for="validationCustom05" class="form-label">Image_3</label>
         <input type="file" class="form-control" id="validationCustom05" name="image_3"
-        accept="image/jpg, image/png" required>
+        accept="image/*" required>
         <div class="invalid-feedback">
             Please provide a valid zip.
         </div>
     </div>
 
+    {{-- <div class="col-md-6">
+        <label for="validationCustom05" class="form-label">Size_id</label>
+        {{-- <input type="text" class="form-control" id="validationCustom05" name="size_id" required> --}}
+        {{-- <select class="form-select" aria-label="Default select examples" name="size_id" multiple>
+            <option selected>Size</option>
+            @foreach($sizes as $size)
+            <option value="{{$size->id}}">{{$size->name}}</option>
+            @endforeach
+        </select>
+        <p>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</p>
+        <div class="invalid-feedback">
+            Please provide a valid zip.
+        </div>
+    </div>  --}}
     <div class="col-md-6">
         <label for="validationCustom05" class="form-label">Size_id</label>
         <input type="text" class="form-control" id="validationCustom05" name="size_id" required>
@@ -80,6 +101,7 @@ enctype="multipart/form-data">
             Please provide a valid zip.
         </div>
     </div>
+
 
     <div class="col-md-6">
         <label for="validationCustom05" class="form-label">Price</label>

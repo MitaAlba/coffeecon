@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Models\Product;
-
+use App\Models\Categorie;
+use App\Models\Size;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -13,7 +14,11 @@ class ProductController extends Controller
     public function index()
     {
         //dd(Product::all());
-        return view('/admin.product.index')->with('products',Product::all());
+        return view('/admin.product.index')
+        ->with('products',Product::all())
+        ->with('categories',Categorie::all());
+        //->with('sizes',Size::all())
+    
     }
 
     /**
@@ -22,9 +27,10 @@ class ProductController extends Controller
     public function create()
     {
         //
-        return view('/admin.product.index')->with('products',Product::all());
-
-    }
+        return view('/admin.product.index')
+        ->with('products',Product::all())
+        ->with('categories',Categorie::all());
+        }
 
     /**
      * Store a newly created resource in storage.
@@ -53,20 +59,20 @@ class ProductController extends Controller
 
         if($request->hasFile('image_1') && $request->file('image_1')->isValid()){
             $img_1=$product->id."_1_".$request->name.".".$request->image_1->extension();
-            $request->image_1->storeAs('products/', $img_1);
+            $ruta=$request->image_1->storeAs('public/products', $img_1);
         }
         
 
 
         if($request->hasFile('image_2') && $request->file('image_2')->isValid()){
             $img_2=$product->id."_2_".$request->name.".".$request->image_2->extension();
-            $request->image_2->storeAs('products/', $img_2);
+            $ruta=$request->image_2->storeAs('public/products', $img_2);
         }
         
 
         if($request->hasFile('image_3') && $request->file('image_3')->isValid()){
             $img_3=$product->id."_3_".$request->name.".".$request->image_3->extension();
-            $request->image_3->storeAs('products/', $img_3);
+            $ruta=$request->image_3->storeAs('public/products', $img_3);
         }
 
         $product->image_1=$img_1;
@@ -76,15 +82,18 @@ class ProductController extends Controller
         //dd($product);
 
 
-        return view('/admin.product.index')->with('products',Product::all());
-    }
+        return view('/admin.product.index')
+        ->with('products',Product::all())
+        ->with('categories',Categorie::all());   
+     }
 
     /**
      * Display the specified resource.
      */
     public function show(string $id)
     {
-        return view('/admin.product.show')->with('products', Product::find($id));
+        return view('/admin.product.show')
+        ->with('products', Product::find($id));
 
     }
 
@@ -94,7 +103,9 @@ class ProductController extends Controller
     public function edit(string $id)
     {
         // FUNCTION:Buscara el producto a cambiar a partir de el Id de este
-        return view('/admin.product.edit')->with('products', Product::find($id));
+        return view('/admin.product.edit')
+        ->with('products', Product::find($id))
+        ->with('categories',Categorie::all());
     }
 
     /**
@@ -119,17 +130,20 @@ class ProductController extends Controller
         //$product->status="ACTIVO";
         if($request->hasFile('image_1') && $request->file('image_1')->isValid()){
             $img_1=$product->id."_1_".$request->name.".".$request->image_1->extension();
-            $request->image_1->storeAs('products/', $img_1);
+            $ruta=$request->image_1->storeAs('public/products', $img_1);
+            Storage::delete('public/products/'.$img_1);
         }
 
         if($request->hasFile('image_2') && $request->file('image_2')->isValid()){
             $img_2=$product->id."_2_".$request->name.".".$request->image_2->extension();
-            $request->image_2->storeAs('products/', $img_2);
+            $ruta=$request->image_2->storeAs('public/products', $img_2);
+            Storage::delete('public/products/'.$img_2);
         }
         
         if($request->hasFile('image_3') && $request->file('image_3')->isValid()){
             $img_3=$product->id."_3_".$request->name.".".$request->image_3->extension();
-            $request->image_3->storeAs('products/', $img_3);
+            $ruta=$request->image_3->storeAs('public/products', $img_3);
+            Storage::delete('public/products/'.$img_3);
         }
 
         $product->image_1=$img_1;
@@ -137,8 +151,10 @@ class ProductController extends Controller
         $product->image_3=$img_3;
 
         $product->save();
-        return view('/admin.product.index')->with('products',Product::all())
-        ->with('mess','UPDATE');
+        return view('/admin.product.index')
+        ->with('products',Product::all())
+        ->with('categories',Categorie::all());
+
     }
 
     /**
@@ -155,16 +171,17 @@ class ProductController extends Controller
 
         //borrado fisico
         $product =Product::find($id);
-       
-        Storage::delete('products/'.$product->image_1);
-        Storage::delete('products/'.$product->image_2);
-        Storage::delete('products/'.$product->image_3);
+        $product->status="INACTIVO";
+        // Storage::delete('public/products/'.$product->image_1);
+        // Storage::delete('public/products/'.$product->image_2);
+        // Storage::delete('public/products/'.$product->image_3);
 
 
-        $product->delete();
+        $product->save();
         
-        return view('/admin.product.index')->with('products',Product::all())
-        ->with('mess','UPDATE');
+        return view('/admin.product.index')
+        ->with('products',Product::all())
+        ->with('categories',Categorie::all());
         
     }
 }

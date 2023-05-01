@@ -33,3 +33,9 @@ Ambos Exitosos...
 1:00pm
 CRUD para la parte de productos con manejo de imagenes como un file.
 
+
+-----Version 1.2.2 Autentificacion Parte 1
+01/05/23
+6:00pm
+Instalacion de Archivos Breeze
+Vista de Login y registrer habilitada(no funcional aun)

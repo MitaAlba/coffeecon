@@ -26,7 +26,7 @@
     @foreach($products as $product)
     <tr>
       <th scope="row">{{$product->id}}</th>
-      <td>{{$product->category_id}}</td>
+      <td>{{$product->categorie_id}}</td>
       <td>{{$product->name}}</td>
       <td>{{$product->description}}</td>
       <td><img src="{{asset('storage/products/'.$product->image_1)}}" alt="{{$product->image_1}}" width="75"> </td>
