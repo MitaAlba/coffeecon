@@ -6,14 +6,15 @@
     <div class="col-md-6">
         {{-- Verificar uso de este campo --}}
         <label for="validationCustom01" class="form-label">User_id</label>
-        <input type="text" class="form-control" id="validationCustom01" name="user_id" required>
+        <input type="number" class="form-control" id="validationCustom01" name="user_id" required>
         <div class="valid-feedback">
             Looks good!
         </div>
     </div>
+     
     <div class="col-md-6">
         <label for="validationCustom02" class="form-label">Store_id</label>
-        <input type="text" class="form-control" id="validationCustom02" name="store_id"  required>
+        <input type="number" class="form-control" id="validationCustom02" name="store_id"  required>
         <div class="valid-feedback">
             Looks good!
         </div>
@@ -30,7 +31,7 @@
   </div> --}}
     <div class="col-md-6">
         <label for="validationCustom03" class="form-label">Product_id</label>
-        <input type="text" class="form-control" id="validationCustom03" name="product_id" required>
+        <input type="number" class="form-control" id="validationCustom03" name="product_id" required>
         <div class="invalid-feedback">
             Please provide a valid city.
         </div>

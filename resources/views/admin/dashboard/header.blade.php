@@ -7,10 +7,10 @@
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
 
-      <form action="logout" method="post">
+      <form action="/logout" method="post">
         @csrf
         {{-- <a class="nav-link px-3" href="/logout">Sign out</a> --}}
-        <input type="submit" value="Sign out" >
+        <input type="submit" value="Sign out"  >
       </form>
 
     </div>

@@ -1,7 +1,6 @@
 ---Error en la creacion del CRUD de Store
 No se encontraba Controller class
-SOLUCION: faltaba la especificicacion completa del class en el path
-
+SOLUCIONADO: faltaba la especificicacion completa del class en el path
 Documentos modificados:
 web.php 
 StoreController.php
@@ -9,18 +8,20 @@ StoreController.php
 ---Pendiente Modificacion de Status
 Aceptar edicion de status diferente de ACTIVO a cada uno de los elementos 
 de las tablas correspondientes aL CRUD ADMIN.
+SOLUCIONADO: modificar las funciones Update y destroller de cada Controlador.
 
----Pendiente Contabilizador Automatico en Total desde Ordenes
 
 ---Error registro de usuarios desde el CRUD Admin
 rectificar valores del Controller para la transerencia de datos.
-SOLUCION
+SOLUCIONADO
 
 
 ---No cargaba vista de Login ni Register 
-SOLUCIONADO
+SOLUCIONADO:
 Instalando node.js, reiniciando equipo y volviendo a emitir comandos. 
 
 ----REVISAR  DESDE CRUD->SHOW->PRODUCTOS->categoria
 revisar por que no se trae al show los datos de categoria 
 correspondientes a cada producto.
+SOLUCIONADO: el dato que se estaba extrayendo desde "table" era category_id y NO categorie_id.
+

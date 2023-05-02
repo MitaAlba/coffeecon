@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\Models\Order;
-
-
+use App\Models\Product;
+use App\Models\Store;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -47,7 +48,8 @@ class OrderController extends Controller
      */
     public function show(string $id)
     {
-        return view('/admin.order.show')->with('orders',Order::all());
+        return view('/admin.order.show')->with('orders',Order::find($id));
+
 
     }
 
@@ -56,7 +58,7 @@ class OrderController extends Controller
      */
     public function edit(string $id)
     {
-        return view('/admin.order.edit')->with('orders',Order::all());
+        return view('/admin.order.edit')->with('orders', Order::find($id));
 
     }
 
@@ -70,6 +72,8 @@ class OrderController extends Controller
         $order->store_id=$request->store_id;
         $order->product_id=$request->product_id;
         $order->total=$request->total;
+        $order->status=$request->status;
+
         //$store->status="ACTIVO";
 
         $order->save();
@@ -82,6 +86,8 @@ class OrderController extends Controller
      */
     public function destroy(string $id)
     {
+        $order = Order::find($id);
+
         $order->delete();
         
         return view('/admin.order.index')->with('orders',Order::all())

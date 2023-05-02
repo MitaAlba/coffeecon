@@ -51,3 +51,7 @@ con un enlace o botón por cada tabla primaria y secundaria. En cada enlace debe
 de cambiar el contenido central permitiendo ejecutar los crud (crear, listar, 
 editar, actualizar, *si la relación lo permite, de lo contrario debe de cambiar 
 el estatus) con y sin imagen de por lo menos 3 de las tablas principales.
+
+-----Version 1.2.4 CRUD y Autentificacion FUNCIONALES 
+se reparon lo errores pendientes de los procesos de 
+CRUD y la Autentificacion, funcionando 100%.

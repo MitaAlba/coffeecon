@@ -125,7 +125,7 @@ class ProductController extends Controller
         $product->size_id=$request->size_id;
         //Para editar un status como INACTIVO tambien
         //Si queda tiempo agregar un SELECT
-        // $product->status=$request->status;
+         $product->status=$request->status;
 
         //$product->status="ACTIVO";
         if($request->hasFile('image_1') && $request->file('image_1')->isValid()){
@@ -171,13 +171,13 @@ class ProductController extends Controller
 
         //borrado fisico
         $product =Product::find($id);
-        $product->status="INACTIVO";
+        //$product->status="INACTIVO";
         // Storage::delete('public/products/'.$product->image_1);
         // Storage::delete('public/products/'.$product->image_2);
         // Storage::delete('public/products/'.$product->image_3);
 
 
-        $product->save();
+        $product->delete();
         
         return view('/admin.product.index')
         ->with('products',Product::all())

@@ -96,7 +96,7 @@ enctype="multipart/form-data">
     </div>  --}}
     <div class="col-md-6">
         <label for="validationCustom05" class="form-label">Size_id</label>
-        <input type="text" class="form-control" id="validationCustom05" name="size_id" required>
+        <input type="number" class="form-control" id="validationCustom05" name="size_id" required>
         <div class="invalid-feedback">
             Please provide a valid zip.
         </div>

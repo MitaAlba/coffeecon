@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Size;
-
-
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class SizeController extends Controller
@@ -66,7 +65,10 @@ class SizeController extends Controller
 
         $size->name=$request->name;
         $size->description=$request->description;
-        //$product->status="ACTIVO";
+        $size->name=$request->name;
+        $size->status=$request->status;
+
+
 
         $size->save();
         return view('/admin.size.index')->with('sizes',Size::all())
@@ -78,8 +80,10 @@ class SizeController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        
         $size =Product::find($id);
+       // $size->status="INACTIVO";
+
        
 
         $size->delete();

@@ -71,6 +71,10 @@ class StoreController extends Controller
         $store->schedule=$request->schedule;
         //$store->status="ACTIVO";
 
+        //ESTATUS INDEPENDIENTE DE BORRADO
+        $store->status=$request->status;
+
+
         $store->save();
         return view('/admin.store.index')->with('stores',Store::all())
         ->with('mess','UPDATE');;
@@ -83,10 +87,18 @@ class StoreController extends Controller
     public function destroy(string $id)
     {
         
-
+        $store =Store::find($id);
         $store->delete();
+        //$store->status="INACTIVO";
+
+        // $store->delete();
         
-        return view('/admin.store.index')->with('stores',Store::all())
-        ->with('mess','UPDATE');
+        // return view('/admin.store.index')->with('stores',Store::all())
+        // ->with('mess','UPDATE');
+
+        //$store->save();
+        
+        return view('/admin.store.index')
+        ->with('stores',Store::all());
     }
 }
