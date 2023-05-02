@@ -34,8 +34,20 @@ Ambos Exitosos...
 CRUD para la parte de productos con manejo de imagenes como un file.
 
 
------Version 1.2.2 Autentificacion Parte 1
+-----Version 1.2.2 Autentificacion ADMINISTRATIVA Parte 1
 01/05/23
 6:00pm
 Instalacion de Archivos Breeze
 Vista de Login y registrer habilitada(no funcional aun)
+
+-----Version 1.2.3 Autentificacion ADMINISTRATIVA parte 2 TERMINADA
+01/05/23
+10:00pm
+
+El inicio de esta área desde un login de acceso para la autenticación,
+una ves autenticado debe de mandar al dashboard administrativo (haciendo uso de
+las plantillas con include y herencia) donde muestren la barra de navegación
+con un enlace o botón por cada tabla primaria y secundaria. En cada enlace debe 
+de cambiar el contenido central permitiendo ejecutar los crud (crear, listar, 
+editar, actualizar, *si la relación lo permite, de lo contrario debe de cambiar 
+el estatus) con y sin imagen de por lo menos 3 de las tablas principales.

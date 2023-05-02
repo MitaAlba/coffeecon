@@ -14,7 +14,13 @@ de las tablas correspondientes aL CRUD ADMIN.
 
 ---Error registro de usuarios desde el CRUD Admin
 rectificar valores del Controller para la transerencia de datos.
+SOLUCION
+
 
 ---No cargaba vista de Login ni Register 
 SOLUCIONADO
 Instalando node.js, reiniciando equipo y volviendo a emitir comandos. 
+
+----REVISAR  DESDE CRUD->SHOW->PRODUCTOS->categoria
+revisar por que no se trae al show los datos de categoria 
+correspondientes a cada producto.
