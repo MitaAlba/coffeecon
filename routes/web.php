@@ -8,6 +8,8 @@ use App\Http\Controllers\CategorieController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SizeController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\CartController;
+
 
 
 /*
@@ -22,7 +24,7 @@ use App\Http\Controllers\OrderController;
 */
 
 Route::get('/', function () {
-    return view('/plantilla.index');
+    return view('/home.index');
 });
 
 Route::get('/dashboard', function () {
@@ -42,11 +44,14 @@ require __DIR__.'/auth.php';
 
 Route::view('/about','about/index')->name('aboutus');
 Route::view('/home','home/index')->name('homes');
+Route::view('/shop','/shop')->name('shop');
+
 Route::view('/menu','menu/index')->name('menus');
 Route::view('/store','store/index')->name('stores');
 Route::view('/plantilla','plantilla.index')->name('plantilla');
 Route::view('/item','item/index')->name('items');
 Route::view('/order','order/index')->name('orders');
+Route::view('/error','error/index')->name('errors');
 
 
 // Route::view('/admin','admin.dashboard.index')->name('admin');
@@ -67,3 +72,11 @@ Route::resource('/admin/categorias', CategorieController::class);
 Route::resource('/admin/usuarios', UserController::class);
 Route::resource('/admin/medidas', SizeController::class);
 Route::resource('/admin/ordenes', OrderController::class);
+
+//Rutas carrito
+Route::get('/shop', [CartController::class, 'shop'])->name('shop');
+Route::get('/cart', [CartController::class, 'cart'])->name('cart.index');
+Route::post('/add', [CartController::class, 'add'])->name('cart.store');
+Route::post('/update', [CartController::class, 'update'])->name('cart.update');
+Route::post('/remove', [CartController::class, 'remove'])->name('cart.remove');
+Route::post('/clear', [CartController::class, 'clear'])->name('cart.clear');

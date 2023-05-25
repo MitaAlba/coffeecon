@@ -1,6 +1,7 @@
 @extends('plantilla.index')
 @section('titulo','Item')
 @section('contenido')
+    
 
 <section class="py-5">
     <div class="containerItem px-4 px-lg-5 my-5">
@@ -131,4 +132,4 @@
         </div>
     </div>
 </section>
-@endsection
+@endsection 

@@ -60,6 +60,7 @@ class ProductController extends Controller
         if($request->hasFile('image_1') && $request->file('image_1')->isValid()){
             $img_1=$product->id."_1_".$request->name.".".$request->image_1->extension();
             $ruta=$request->image_1->storeAs('public/products', $img_1);
+
         }
         
 
@@ -67,12 +68,14 @@ class ProductController extends Controller
         if($request->hasFile('image_2') && $request->file('image_2')->isValid()){
             $img_2=$product->id."_2_".$request->name.".".$request->image_2->extension();
             $ruta=$request->image_2->storeAs('public/products', $img_2);
+
         }
         
 
         if($request->hasFile('image_3') && $request->file('image_3')->isValid()){
             $img_3=$product->id."_3_".$request->name.".".$request->image_3->extension();
             $ruta=$request->image_3->storeAs('public/products', $img_3);
+            
         }
 
         $product->image_1=$img_1;

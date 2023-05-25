@@ -69,12 +69,18 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 text-center logo-wrap">
-						<div id="fh5co-logo"><a href="index.html">CooffeCon<span>.</span></a></div>
+						<div id="fh5co-logo"><a href="{{route('homes')}}">CooffeCon<span>.</span></a></div>
+					</div>
+					<div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right">
+						<a href="{{route('errors')}}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
+						
+
+								<a href="{{route('errors')}}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
 					</div>
 					<div class="col-xs-12 text-center menu-1 menu-wrap">
 						<ul>
 							<li ><a href="{{route('homes')}}">Home</a></li>
-							<li><a href="{{route('errors')}}">Menu</a></li>
+							<li><a href="{{route('shop')}}">Menu</a></li>
 							<li class="has-dropdown">
 								<a href="{{route('stores')}}">Stores</a>
 							</li>
@@ -84,11 +90,7 @@
 						</ul>
 					</div>
 
-					<div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right">
-						<a href="/login" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
-
-								<a href="/register" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
-					</div>
+					
 
 
 				</div>
@@ -104,8 +106,10 @@
 				<div class="col-md-12 text-center">
 					<div class="display-t js-fullheight">
 						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-							<h1>The Best Coffee <em>in</em> Guadalajara</h1>
-							<h2>An incredible coffee </h2>
+							<h1>We're sorry</h1>
+							<h2>
+                                It's not possible to process your request at this time.</h2>
+                                <h2>Try another time... </h2>
 						</div>
 					</div>
 				</div>
@@ -142,10 +146,10 @@
 				<div class="col-md-2 col-md-push-1 fh5co-widget">
 					<h4>Categories</h4>
 					<ul class="fh5co-footer-links">
-						<li><a href="#">Customer Support</a></li>
-						<li><a href="#">Work with us</a></li>
-						<li><a href="#">Invoice</a></li>
-						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="{{route('errors')}}">Login</a></li>
+						<li><a href="{{route('shop')}}">Cart</a></li>
+						<li><a href="{{route('stores')}}">Stores</a></li>
+						<li><a  href="{{route('errors')}}">Info</a></li>
 					</ul>
 				</div>
 
@@ -169,10 +173,10 @@
 					</p>
 					<p>
 						<ul class="fh5co-social-icons">
-							<li><a href="#"><i class="icon-twitter2"></i></a></li>
-							<li><a href="#"><i class="icon-facebook2"></i></a></li>
-							<li><a href="#"><i class="icon-linkedin2"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble2"></i></a></li>
+							<li><a href="{{route('errors')}}"><i class="icon-twitter2"></i></a></li>
+							<li><a href="{{route('errors')}}"><i class="icon-facebook2"></i></a></li>
+							<li><a href="{{route('errors')}}"><i class="icon-linkedin2"></i></a></li>
+							<li><a href="{{route('errors')}}"><i class="icon-dribbble2"></i></a></li>
 						</ul>
 					</p>
 				</div>

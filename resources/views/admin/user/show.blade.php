@@ -17,6 +17,14 @@
         </div>
     </div>
     <div class="col-md-6">
+      {{-- Verificar uso de este campo --}}
+      <label for="validationCustom01" class="form-label">Lastname</label>
+      <input type="text" class="form-control" id="validationCustom01" name="lastname" value="{{$users->lastname}}" disabled>
+      <div class="valid-feedback">
+          Looks good!
+      </div>
+  </div>
+    <div class="col-md-6">
         <label for="validationCustom02" class="form-label">Email</label>
         <input type="text" class="form-control" id="validationCustom02" name="email" value="{{$users->email}}"  disabled>
         <div class="valid-feedback">

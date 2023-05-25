@@ -7,6 +7,7 @@
       {{-- Revisar si llaves foraneas tambien se agregan --}}
       <th scope="col">Id</th>
       <th scope="col">Name</th>
+      <th scope="col">Lastame</th>
       <th scope="col">Email</th>
       <th scope="col">Password</th>
       <th scope="col">Edit</th>
@@ -20,6 +21,7 @@
     <tr>
       <th scope="row">{{$user->id}}</th>
       <td>{{$user->name}}</td>
+      <td>{{$user->lastname}}</td>
       <td>{{$user->email}}</td>
       <td>{{$user->password}}</td>
       <td><a href="/admin/usuarios/{{$user->id}}/edit">edit</a></td>

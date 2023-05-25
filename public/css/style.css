@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
@@ -52,10 +53,11 @@ body {
 }
 
 a {
-  color: #ea272d;
+  color: #fff;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  margin-left: 5%;
 }
 a:hover, a:active, a:focus {
   color: #ea272d;
@@ -89,7 +91,6 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #fff;
   background: #ea272d;
 }
-
 .fh5co-nav {
   position: fixed;
   width: 100%;

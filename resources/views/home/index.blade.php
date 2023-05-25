@@ -26,12 +26,12 @@
 		</div>
 	</div>
 
-	<div id="fh5co-featured-menu" class="fh5co-section">
+	{{-- <div id="fh5co-featured-menu" class="fh5co-section">
 		<div class="container">
 			<div class="row">
-				
+				 --}}
 
-				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
+				{{-- <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
 					<div class="fh5co-item">
 						<img src="images/gallery_9.jpeg" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
 						<h3><a href="">Americano</a></h3>
@@ -42,7 +42,7 @@
 				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
 					<div class="fh5co-item margin_top">
 						{{-- PENDIENTE:  centrar las imagenes --}}
-						<img src="images/Iced-Coffee.png" width="100" height="100" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
+						{{-- <img src="images/Iced-Coffee.png" width="100" height="100" class="img-responsive" alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co">
 						<h3><a href="{{route('items')}}">Iced Coffee </a></h3>
 						<span class="fh5co-price">$19<sup>.00</sup></span>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nihil cupiditate ut vero alias quaerat inventore molestias vel suscipit explicabo.</p>
@@ -64,10 +64,10 @@
 						<span class="fh5co-price">$22<sup>.50</sup></span>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nihil cupiditate ut vero alias quaerat inventore molestias vel suscipit explicabo.</p>
 					</div>
-				</div>
-			</div>
+				</div> --}}
+			{{-- </div>
 		</div>
-	</div>
+	</div> --}}
 
 	
 
@@ -95,7 +95,7 @@
 						   					<div class="desc">
 													<h2>Crab <em>with</em> Curry Sources</h2>
 													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt eveniet quae, numquam magnam doloribus eligendi ratione rem, consequatur quos natus voluptates est totam magni! Nobis a temporibus, ipsum repudiandae dolorum.</p>
-													<p><a href="#" class="btn btn-primary btn-outline">Learn More</a></p>
+													<p><a href="{{route('shop')}}" class="btn btn-primary btn-outline">Learn More</a></p>
 						   					</div>
 						   				</div>
 						   			</div>
@@ -111,7 +111,7 @@
 						   					<div class="desc">
 													<h2>Tuna <em>&amp;</em> Roast Beef</h2>
 													<p>Ink is a free html5 bootstrap and a multi-purpose template perfect for any type of websites. A combination of a minimal and modern design template. The features are big slider on homepage, smooth animation, product listing and many more</p>
-													<p><a href="#" class="btn btn-primary btn-outline">Learn More</a></p>
+													<p><a href="{{route('shop')}}" class="btn btn-primary btn-outline">Learn More</a></p>
 						   					</div>
 						   				</div>
 						   			</div>
@@ -127,7 +127,7 @@
 						   					<div class="desc">
 													<h2>Egg <em>with</em> Mushroom</h2>
 													<p>Ink is a free html5 bootstrap and a multi-purpose template perfect for any type of websites. A combination of a minimal and modern design template. The features are big slider on homepage, smooth animation, product listing and many more</p>
-													<p><a href="#" class="btn btn-primary btn-outline">Learn More</a></p>
+													<p><a href="{{route('shop')}}" class="btn btn-primary btn-outline">Learn More</a></p>
 						   					</div>
 						   				</div>
 						   			</div>
@@ -142,7 +142,7 @@
 		</div>
 	</div>
 
-	<div id="fh5co-blog" class="fh5co-section">
+	{{-- <div id="fh5co-blog" class="fh5co-section">
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
@@ -198,7 +198,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> --}}
 	
 	<div id="fh5co-started" class="fh5co-section animate-box" style="background-image: url(images/hero_1.jpeg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
@@ -207,7 +207,7 @@
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>Book a Table</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae vitae cupiditate, sequi quam ea id dolor reiciendis consectetur repudiandae. Rem quam, repellendus veniam ipsa fuga maxime odio? Eaque!</p>
-					<p><a href="reservation.html" class="btn btn-primary btn-outline">Book Now</a></p>
+					<p><a href="{{route('stores')}}" class="btn btn-primary btn-outline">Book Now</a></p>
 				</div>
 			</div>
 		</div>
